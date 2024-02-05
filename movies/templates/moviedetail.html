@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Details
+{% endblock %}
+{% block content %}
+<center xmlns="http://www.w3.org/1999/html">
+    <h1 class="p-2"> <b>Movie Details</b></h1>
+
+<div class="p-2">
+    <img src="{{b.img.url}}" height="400px" width="300px"><br>
+
+
+
+   <b> {{b.name}}</b>
+<br>    {{b.desc}}
+   <br> {{b.year}}
+    <br><a href="{% url 'movieedit' b.id %}" class="btn btn-warning">Update</a> &nbsp;
+    <a href="{% url 'moviedelete' b.id %}" class="btn btn-danger">Delete</a>
+</div>
+    </center>
+
+
+
+
+
+
+{% endblock %}
